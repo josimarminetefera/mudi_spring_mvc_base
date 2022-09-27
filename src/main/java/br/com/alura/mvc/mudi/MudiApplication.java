@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MudiApplication {
 
 	public static void main(String[] args) {
+		// Esta é a primeira class chamada.
+		System.out.println("----------------- MudiSpringMvcApplication");
 		SpringApplication.run(MudiApplication.class, args);
 	}
 
