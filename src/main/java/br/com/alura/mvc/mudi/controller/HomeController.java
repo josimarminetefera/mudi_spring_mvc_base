@@ -29,14 +29,15 @@ public class HomeController {
 	public String home(Model model) {
 		System.out.println("----------------- HomeController /home");
 		List<Pedido> pedidos = repository.findAll();
-		model.addAttribute("pedidos", pedidos);
+		model.addAttribute("pedidos", pedidos); // lista de pedidos que vai para a pagina html
 		return "home";
 	}
 
 	// http://localhost:8080/home/aguardando
 	// http://localhost:8080/home/aprovado
 	// http://localhost:8080/home/entregue
-	// pegar variavel que vem no path @PathVariable("status") e joga para dentro do String status
+	// pegar variavel que vem no path @PathVariable("status") e joga para dentro do
+	// String status
 	@GetMapping("/{status}")
 	public String porStatus(@PathVariable("status") String status, Model model) {
 		System.out.println("----------------- HomeController /status");
